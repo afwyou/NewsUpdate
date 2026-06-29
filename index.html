@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日財經頭條監控</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f5f7f9; color: #333; }
+        h1 { border-bottom: 2px solid #0056b3; padding-bottom: 10px; color: #0056b3; }
+        .filter-section { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .news-card { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #cbd5e1; }
+        .ctee { border-left-color: #e11d48; } /* 工商時報 */
+        .edn { border-left-color: #2563eb; }  /* 經濟日報 */
+        .source-badge { display: inline-block; padding: 2px 8px; font-size: 12px; border-radius: 4px; color: white; font-weight: bold; margin-bottom: 5px; }
+        .bg-ctee { background-color: #e11d48; }
+        .bg-edn { background-color: #2563eb; }
+        .news-title { font-size: 18px; margin: 5px 0; }
+        .news-title a { color: #1e293b; text-decoration: none; }
+        .news-title a:hover { text-decoration: underline; }
+        .time { font-size: 12px; color: #64748b; }
+        input[type="text"] { width: 70%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>每日財經頭條監控</h1>
+
+    <div class="filter-section">
+        <h3>新聞篩選設定</h3>
+        <label><input type="checkbox" id="showCtee" checked> 顯示工商時報</label> &nbsp;
+        <label><input type="checkbox" id="showEdn" checked> 顯示經濟日報</label>
+        <br><br>
+        <label for="excludeWords">排除關鍵字 (用逗號隔開)：</label><br>
+        <input type="text" id="excludeWords" placeholder="例如：房市, 營建, 航運">
+    </div>
+
+    <div id="news-container">載入新聞中...</div>
+
+    <script>
+        let allNews = [];
+
+        // 模擬或讀取自動產生的 news.json
+        async function fetchNews() {
+            try {
+                // 部署到 GitHub 後，會自動讀取同目錄下的 news.json
+                const response = await fetch('news.json');
+                allNews = await response.json();
+                renderNews();
+            } catch (error) {
+                document.getElementById('news-container').innerHTML = '目前暫無新聞資料，請確保 GitHub Actions 已成功執行並產生 news.json。';
+            }
+        }
+
+        function renderNews() {
+            const showCtee = document.getElementById('showCtee').checked;
+            const showEdn = document.getElementById('showEdn').checked;
+            const excludeInput = document.getElementById('excludeWords').value;
+            const excludeWords = excludeInput.split(',').map(w => w.trim()).filter(w => w !== "");
+
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+
+            const filteredNews = allNews.filter(item => {
+                // 來源篩選
+                if (item.source === '工商時報' && !showCtee) return false;
+                if (item.source === '經濟日報' && !showEdn) return false;
+                
+                // 關鍵字排除
+                for (let word of excludeWords) {
+                    if (item.title.includes(word)) return false;
+                }
+                return true;
+            });
+
+            if (filteredNews.length === 0) {
+                container.innerHTML = '<p>沒有符合篩選條件的新聞。</p>';
+                return;
+            }
+
+            filteredNews.forEach(item => {
+                const card = document.createElement('div');
+                card.className = `news-card ${item.source === '工商時報' ? 'ctee' : 'edn'}`;
+                
+                const badgeClass = item.source === '工商時報' ? 'bg-ctee' : 'bg-edn';
+                
+                card.innerHTML = `
+                    <span class="source-badge ${badgeClass}">${item.source}</span>
+                    <div class="time">${item.time || ''}</div>
+                    <h2 class="news-title"><a href="${item.url}" target="_blank">${item.title}</a></h2>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // 綁定事件，當設定改變時即時更新畫面
+        document.getElementById('showCtee').addEventListener('change', renderNews);
+        document.getElementById('showEdn').addEventListener('change', renderNews);
+        document.getElementById('excludeWords').addEventListener('input', renderNews);
+
+        // 初始載入
+        fetchNews();
+    </script>
+</body>
+</html>
