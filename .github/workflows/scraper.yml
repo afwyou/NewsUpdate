@@ -1,0 +1,30 @@
+name: 每日財經新聞自動爬蟲
+
+on:
+  schedule:
+    # 這裡使用的是 UTC 時間。UTC 22:00 等於台灣時間 (UTC+8) 的早上 06:00
+    - cron: '0 22 * * *'
+  workflow_dispatch: # 這個設定讓你可以隨時在 GitHub 網頁上點擊按鈕「手動觸發」測試
+
+jobs:
+  scrape_and_commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 檢查並複製專案代碼
+      uses: actions/checkout@v3
+
+    - name: 設定 Python 環境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 執行爬蟲腳本
+      run: python scraper.py
+
+    - name: 將更新後的 news.json 提交回 GitHub 儲存庫
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add news.json
+        # 只有當 news.json 有變化時才提交，避免噴錯
+        git diff --quiet && git diff --staged --quiet || (git commit -m "自動更新：每日頭條新聞" && git push)
