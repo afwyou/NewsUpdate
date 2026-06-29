@@ -3,27 +3,44 @@ import urllib.request
 import re
 
 def fetch_ctee_headlines():
-    """抓取工商時報報紙頭條"""
+    """精準抓取工商時報報紙頭條（超強防阻擋與解碼版）"""
     url = "https://newspaper.ctee.com.tw/"
     news_list = []
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-        with urllib.request.urlopen(req, timeout=15) as response:
-            html = response.read().decode('utf-8')
+        # 模擬完全真實的 Chrome 瀏覽器外殼，防止被網站防爬機制封鎖
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7'
+        }
         
-        # 使用更寬鬆、適應力更強的正則表達式抓取包含 share-content 的連結與標題
-        pattern = r'<a\s+[^>]*href="([^"]*share-content[^"]*)"[^>]*>([\s\S]*?)<\/a>'
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=15) as response:
+            html = response.read().decode('utf-8', errors='ignore')
+        
+        # 工商時報實體報紙網頁的連結特徵，通常包含 share-content 或 content
+        # 我們用最直覺的「雙引號」跟「單引號」通殺模式來搜尋連結
+        pattern = r'href=["\']([^"\']*(?:share-content|content)[^"\']*)["\'][^>]*>([\s\S]*?)<\/a>'
         matches = re.findall(pattern, html)
         
         seen_urls = set()
         for link, title_html in matches:
-            full_url = link if link.startswith('http') else f"https://newspaper.ctee.com.tw{link}"
-            # 移除所有 HTML 標籤，只留下純文字標題
-            title = re.sub(r'<[^>]+>', '', title_html).strip()
-            # 移除換行符號與多餘空白
-            title = title.replace('\n', '').replace('\r', '').strip()
+            # 確保網址是完整的路徑
+            if link.startswith('//'):
+                full_url = f"https:{link}"
+            elif link.startswith('/'):
+                full_url = f"https://newspaper.ctee.com.tw{link}"
+            elif not link.startswith('http'):
+                full_url = f"https://newspaper.ctee.com.tw/{link}"
+            else:
+                full_url = link
+                
+            # 徹底清洗標題文字
+            title = re.sub(r'<[^>]+>', '', title_html)  # 移除 HTML 標籤
+            title = re.sub(r'\s+', ' ', title).strip() # 移除連續空白、換行
             
-            if title and len(title) > 5 and full_url not in seen_urls:
+            # 過濾無效字串與重複內容
+            if title and len(title) > 5 and "請登入" not in title and full_url not in seen_urls:
                 seen_urls.add(full_url)
                 news_list.append({
                     "source": "工商時報",
@@ -32,29 +49,24 @@ def fetch_ctee_headlines():
                     "time": "今日頭條"
                 })
     except Exception as e:
-        print(f"抓取工商時報失敗: {e}")
+        print(f"抓取工商時報失敗原因: {e}")
     return news_list
 
 def fetch_edn_headlines():
-    """抓取經濟日報焦點頭條 (備用與豐富水源)"""
+    """抓取經濟日報焦點頭條（維持原先成功運作的邏輯）"""
     url = "https://money.udn.com/money/index"
     news_list = []
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
         with urllib.request.urlopen(req, timeout=15) as response:
-            html = response.read().decode('utf-8')
+            html = response.read().decode('utf-8', errors='ignore')
         
-        # 抓取經濟日報首頁的重點新聞連結
         pattern = r'<a\s+[^>]*href="([^"]*/story/[^"]*)"[^>]*title="([^"]+)"'
         matches = re.findall(pattern, html)
         
         seen_urls = set()
         for link, title in matches:
-            if "money.udn.com" not in link:
-                full_url = f"https://money.udn.com{link}"
-            else:
-                full_url = link
-            
+            full_url = link if "money.udn.com" in link else f"https://money.udn.com{link}"
             title = title.strip()
             if title and len(title) > 5 and full_url not in seen_urls:
                 seen_urls.add(full_url)
@@ -69,23 +81,20 @@ def fetch_edn_headlines():
     return news_list
 
 def main():
-    print("開始執行財經報紙頭條爬蟲...")
+    print("開始執行雙報頭條即時監控爬蟲...")
     
     all_news = []
-    # 同時抓取兩家
     all_news.extend(fetch_ctee_headlines())
     all_news.extend(fetch_edn_headlines())
     
-    # 如果真的不幸都沒抓到，放一則測試公告，避免網頁完全空白噴錯
     if not all_news:
         all_news.append({
             "source": "系統通知",
-            "title": "今天暫時沒有抓取到報紙頭條，請稍後再試。",
+            "title": "今天暫時沒有抓取到兩大報頭條，請稍後再試。",
             "url": "https://newspaper.ctee.com.tw/",
             "time": ""
         })
         
-    # 寫入 news.json
     with open('news.json', 'w', encoding='utf-8') as f:
         json.dump(all_news, f, ensure_ascii=False, indent=4)
         
