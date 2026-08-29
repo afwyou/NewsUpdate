@@ -1,134 +1,122 @@
 [
     {
         "source": "經濟日報",
-        "title": "外資錢進來了！台股周漲1,107點 這周最愛的竟不是 AI 股",
-        "url": "https://money.udn.com/money/story/5607/9721059",
+        "title": "9月 Fed 升息機率將近60%？伊爾艾朗舉3理由：市場高估了",
+        "url": "https://money.udn.com/money/story/5599/9722125?from=edn_maintab_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "輝達財報帶旺全球股市、勞保費率調升至13% 本周不可不知的五件財經大事",
-        "url": "https://money.udn.com/money/story/5607/9720309",
+        "title": "華許演說最大意外是什麼？180度大轉彎且補給市場「前瞻指引」",
+        "url": "https://money.udn.com/money/story/5599/9722232?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "外資升價股有戲 金像電、萬潤等可望引領指數上攻",
+        "url": "https://money.udn.com/money/story/5607/9722172?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "美股收低 科技股和晶片股跌勢較重 本周有兩大考驗",
+        "url": "https://money.udn.com/money/story/123398/9722178?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "華許喊打通膨 升息機率增 市場預估下月升1碼機率達58%",
+        "url": "https://money.udn.com/money/story/5599/9722146?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "輝達雙引擎發動 新一代產品價格翻倍 廣達、緯穎等業績將起飛",
+        "url": "https://money.udn.com/money/story/5612/9722152?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "純晶圓代工 台積電連連稱霸 連續兩季拿下73%市占率",
+        "url": "https://money.udn.com/money/story/5612/9722158?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "藥華藥 Ropeg 獲美 FDA 核准 進軍全球最大罕見血癌市場 搶攻400億美元商機",
+        "url": "https://money.udn.com/money/story/5612/9722165?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "北市豪宅上半年預售成交量暴增1倍 成屋也增逾1成",
+        "url": "https://money.udn.com/money/story/5621/9722175?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "巴拿馬塞船 運輸業奇招突圍 液化石油氣船在港外船對船轉駁",
+        "url": "https://money.udn.com/money/story/5599/9722210?from=edn_maintab_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "冰島是否重啟入歐談判　公投結果預計30日揭曉",
+        "url": "https://money.udn.com/money/story/5599/9722360?from=edn_newest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "尼日軍政府稱平息叛變　傳俄軍助奪回首都空軍基地",
+        "url": "https://money.udn.com/money/story/5599/9722331?from=edn_newest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "挪威新國王首度發聲　悼念父王、宣示肩負重任",
+        "url": "https://money.udn.com/money/story/5599/9722320?from=edn_newest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "美委石油協議能讓油價降嗎？關鍵問答一次看",
+        "url": "https://money.udn.com/money/story/5599/9722316?from=edn_newest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "8月30日 五件財經大事搶先看",
+        "url": "https://money.udn.com/money/story/5607/9722308?from=edn_newest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "AI 襲來！巴菲特的價值投資還管用嗎？專家警告這類股票恐重傷",
+        "url": "https://money.udn.com/money/story/123398/9721910?from=edn_hottest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "藥華藥 Ropeg 繼台、日之後拿下美國 ET 藥證 未來搶攻逾400億美元新市場",
+        "url": "https://money.udn.com/money/story/5612/9721368?from=edn_hottest_index",
+        "time": "焦點頭條"
+    },
+    {
+        "source": "經濟日報",
+        "title": "華許放鷹金價跳水 國銀：這些買家才是堅實買盤 短線拉回可這樣做",
+        "url": "https://money.udn.com/money/story/5613/9721810?from=edn_hottest_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
         "title": "日圓再破160 美日聯手護盤不到一月失靈 貝森特坦言干預是怕美債遭殃",
-        "url": "https://money.udn.com/money/story/5599/9721292?from=edn_maintab_index",
+        "url": "https://money.udn.com/money/story/5599/9721292?from=edn_hottest_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "輝達財報帶旺全球股市、勞保費率調升至13% 本周不可不知的五件財經大事",
-        "url": "https://money.udn.com/money/story/5607/9720309?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "聯準會主席鷹派談話引發升息預期 美股收黑",
-        "url": "https://money.udn.com/money/story/123398/9721078?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "華許放鷹：Fed 有工作要做 通膨未明顯降溫",
-        "url": "https://money.udn.com/money/story/5599/9720935?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "台幣強升 將挺進31.5元 8月以來升幅逾2%",
-        "url": "https://money.udn.com/money/story/5616/9720890?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "邁威爾報捷 台鏈有甜頭 華星光、波若威等沾光",
-        "url": "https://money.udn.com/money/story/5612/9720882?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "人口大危機／50年後近半消失 國發會最新推估 2075年約只剩下1,215萬人",
-        "url": "https://money.udn.com/money/story/10869/9720922?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "台聚集團高值化轉型 拚突圍 亞聚、台達化、華夏強攻差異化產品",
-        "url": "https://money.udn.com/money/story/5612/9720896?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "李長庚：國泰金股利會更好 上半年大賺765億元 每股純益4.95元",
-        "url": "https://money.udn.com/money/story/5613/9720874?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "青安2.0 三年放錢近1.4兆 逾17萬戶受惠",
-        "url": "https://money.udn.com/money/story/7307/9720928?from=edn_maintab_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "營建漲價壓力大 國土署：老宅延壽、都更危老推動鼓勵使用國產建材",
-        "url": "https://money.udn.com/money/story/7307/9721457?from=edn_newest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "雨衣賊持砂輪機偷香油錢　彰警逮人送辦",
-        "url": "https://money.udn.com/money/story/5599/9721454?from=edn_newest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "涉中資水壩收賄案　厄瓜多前總統莫雷諾遭判有罪",
-        "url": "https://money.udn.com/money/story/5599/9721452?from=edn_newest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "林佳龍訪帛琉出席特展　見證台灣攜手友邦合作成果",
-        "url": "https://money.udn.com/money/story/7307/9721451?from=edn_newest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "美喆財報／北美客戶保守下單 上半年虧1.42億元、每股虧1.79元",
-        "url": "https://money.udn.com/money/story/5710/9721448?from=edn_newest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "垃圾桶裡的發票可以撿嗎？他帶回家竟收警方通知 律師解答了",
-        "url": "https://money.udn.com/money/story/122328/9720095?from=edn_hottest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "整理包／全民動起來！運動部推「揮汗有禮」200萬份超商咖啡、豆漿免費拿 活動辦法、使用方式一次看",
-        "url": "https://money.udn.com/money/story/124512/9719910?from=edn_hottest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "外資、主動式 ETF 愛股！欣興遭檢調搜索 下周一經理人比手速？",
-        "url": "https://money.udn.com/money/story/5710/9720252?from=edn_hottest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "欣興遭搜索晚間再澄清：涉及產地標示爭議 1總經理、1副總配合調查",
-        "url": "https://money.udn.com/money/story/5612/9720489?from=edn_hottest_index",
-        "time": "焦點頭條"
-    },
-    {
-        "source": "經濟日報",
-        "title": "網路傳聞多 欣興完整重大訊息說明配合檢調調查",
-        "url": "https://money.udn.com/money/story/5612/9720235?from=edn_hottest_index",
+        "title": "9月 Fed 升息機率將近60%？伊爾艾朗舉3理由：市場高估了",
+        "url": "https://money.udn.com/money/story/5599/9722125?from=edn_hottest_index",
         "time": "焦點頭條"
     },
     {
@@ -211,50 +199,50 @@
     },
     {
         "source": "經濟日報",
-        "title": "中國大陸加大採購美國大豆 芝加哥大豆期貨創2024年以來新高",
-        "url": "https://money.udn.com/money/story/5599/9720144?from=edn_bloomberg_index_side",
+        "title": "華許再不行動 恐喪失公信力",
+        "url": "https://money.udn.com/money/story/5944/9722208?from=edn_bloomberg_index_side",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "基本面仍然不利日圓 干預行動帶來的漲勢在一個月後消退",
-        "url": "https://money.udn.com/money/story/5599/9720141?from=edn_bloomberg_index_side",
+        "title": "日圓兌美元再度跌破160 美日上次干預的成果減退",
+        "url": "https://money.udn.com/money/story/5599/9721029?from=edn_bloomberg_index_side",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "人口大危機／50年後近半消失 國發會最新推估 2075年約只剩下1,215萬人",
-        "url": "https://money.udn.com/money/story/10869/9720922?from=edn_focus_index",
+        "title": "AI 熱 PMI 估連11月擴張 市場密切關注供應鏈出貨情形",
+        "url": "https://money.udn.com/money/story/10869/9722092?from=edn_focus_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "邁威爾報捷 台鏈有甜頭 華星光、波若威等沾光",
-        "url": "https://money.udn.com/money/story/5612/9720882?from=edn_industry_index",
+        "title": "輝達雙引擎發動 新一代產品價格翻倍 廣達、緯穎等業績將起飛",
+        "url": "https://money.udn.com/money/story/5612/9722152?from=edn_industry_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "輝達財報帶旺全球股市、勞保費率調升至13% 本周不可不知的五件財經大事",
-        "url": "https://money.udn.com/money/story/5607/9720309?from=edn_stock_index",
+        "title": "17檔投信作帳 行情點火 奇鋐、南亞等將扛多頭大旗",
+        "url": "https://money.udn.com/money/story/5607/9722168?from=edn_stock_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "華許重拾抗通膨公信力 卻把自己逼進9月升息死角",
-        "url": "https://money.udn.com/money/story/5599/9721387?from=edn_world_index",
+        "title": "美股收低 科技股和晶片股跌勢較重 本周有兩大考驗",
+        "url": "https://money.udn.com/money/story/123398/9722178?from=edn_world_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "陸 CCL 龍頭 建滔積層板今年七度漲價 價格再上調10%-20%",
-        "url": "https://money.udn.com/money/story/5603/9720862?from=edn_china_index",
+        "title": "陸房貸期限延至最長40年 政府祭多項新規救房市",
+        "url": "https://money.udn.com/money/story/5603/9722179?from=edn_china_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "李長庚：國泰金股利會更好 上半年大賺765億元 每股純益4.95元",
-        "url": "https://money.udn.com/money/story/5613/9720874?from=edn_finance_index",
+        "title": "匯市最前線／台幣有望挑戰31.4元",
+        "url": "https://money.udn.com/money/story/5616/9722148?from=edn_finance_index",
         "time": "焦點頭條"
     },
     {
@@ -265,14 +253,14 @@
     },
     {
         "source": "經濟日報",
-        "title": "今日最夯 ETF／ CSP 大廠加速布建 AI 基建 這檔 ETF 漲逾4%最吃香",
-        "url": "https://money.udn.com/money/story/5618/9720729?from=edn_finmanagement_index",
+        "title": "科技 ETF 利多支撐漲勢帶勁 主動永豐科技趨勢周漲8.9%",
+        "url": "https://money.udn.com/money/story/5618/9721971?from=edn_finmanagement_index",
         "time": "焦點頭條"
     },
     {
         "source": "經濟日報",
-        "title": "台中科博館商圈 機能佳",
-        "url": "https://money.udn.com/money/story/5930/9720565?from=edn_house_index",
+        "title": "北市豪宅上半年預售成交量暴增1倍 成屋也增逾1成",
+        "url": "https://money.udn.com/money/story/5621/9722175?from=edn_house_index",
         "time": "焦點頭條"
     },
     {
@@ -289,8 +277,8 @@
     },
     {
         "source": "經濟日報",
-        "title": "趨勢觀察／愛卡拉集團董事長程世嘉 治理+信任 「贏」戰 AI 賽局",
-        "url": "https://money.udn.com/money/story/122331/9718681?from=edn_off_index",
+        "title": "台灣虎航客艙組員招募初試登場 近3000人搶當30名「虎寶虎妞」",
+        "url": "https://money.udn.com/money/story/122329/9721834?from=edn_off_index",
         "time": "焦點頭條"
     }
 ]
